@@ -1,0 +1,20 @@
+{
+  "name": "full-backend-zero",
+  "version": "1.0.0",
+  "description": "Hoi Dan IT FullStack backend zero",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/VuNguyen76/udemy-fullstack-backend-zero.git)"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "Thanh Vu",
+  "license": "ISC"
+}
