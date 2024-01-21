@@ -1,7 +1,15 @@
+const connection = require("../config/dataBase");
+
 const getHomepage = (req, res) => {
-    //process data
-    //call model
-  res.send("Hello Word vs Hoi Dan IT & Eric ! & nodemon");
+  //process data
+  //call model
+  let users = [];
+  connection.query("SELECT * FROM Users u", function (err, results, fields) {
+    users = results;
+    console.log(">>>results home page ", results);
+    console.log(">>check user :", users);
+    res.send(JSON.stringify(users));
+  });
 };
 
 const getABC = (req, res) => {
