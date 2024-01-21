@@ -1,4 +1,6 @@
 const getHomepage = (req, res) => {
+    //process data
+    //call model
   res.send("Hello Word vs Hoi Dan IT & Eric ! & nodemon");
 };
 
