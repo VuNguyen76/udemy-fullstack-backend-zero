@@ -10,6 +10,9 @@ const app = express();
 const port = process.env.PORT || 8888; //port => hard code . uat .pord
 const hostname = process.env.HOST_NAME;
 
+// config req.body
+app.use(express.json()); // for json
+app.use(express.urlencoded({ extended: true })); // for form data
 //config template engine
 configViewEngine(app);
 
@@ -20,8 +23,8 @@ app.use("/", wedRoutes);
 
 //simple queiry
 connection.query("SELECT * FROM Users u", function (err, results, fields) {
-  console.log(">>>results: ", results);
-  console.log(">>>fields: ", fields);
+  // console.log(">>>results: ", results);
+  // console.log(">>>fields: ", fields);
 });
 app.listen(port, hostname, () => {
   console.log(`Example app listening on port ${port}`);
